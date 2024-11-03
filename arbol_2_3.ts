@@ -72,13 +72,12 @@ class Node23{
 class Arbol23 {
     private root: Node23 | null = null;
 
-    // Método para insertar un dato en el árbol
     public insert(data: number): void {
         if (this.root === null) {
-            // Crear la raíz si el árbol está vacío
+            
             this.root = new Node23(data);
         } else {
-            // Insertar en el nodo existente
+        
             this.insertIntoNode(this.root, data);
         }
     }
@@ -159,7 +158,7 @@ class Arbol23 {
             if (node.getRightChild()) values.push(...this.readNode(node.getRightChild()));
             
         }
-        
+
         return values;
 
 
@@ -174,5 +173,5 @@ arbol.insert(20);
 arbol.insert(5);
 arbol.insert(15);
 
-// Leer los datos del árbol
-console.log(arbol.read()); // Deberías ver los datos en orden
+
+console.log(arbol.read());
